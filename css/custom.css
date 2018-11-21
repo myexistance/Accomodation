@@ -2,3 +2,69 @@
 	-webkit-transform: translate3d(0, 125%, 0);
 	transform: translate3d(0, 125%, 0);
 } */
+/* main page  */
+nav a {
+  color: black;
+
+}
+
+/* .link-modal{
+    width: 50%;
+    text-align: center;
+    padding-top: 400px;
+
+} */
+/* modal */
+.modal-body {
+    height:400px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.modal-backdrop {
+  background-color: transparent !important;
+}
+
+#form {
+    left: 10%;
+    right:10%;
+    top: 50%;
+    /* margin-left: -25%; */
+    position: absolute;
+    margin-top: 0;
+}
+
+#form__g {
+    left: 10%;
+    right:10%;
+    top: 50%;
+    /* margin-left: -25%; */
+    position: absolute;
+    margin-top: 0;
+}
+
+select {
+    width: 60%;
+}
+
+@media (min-width: 375px){
+  #form {
+      left: 0;
+      right:5%;
+      top: 50%;
+      /* margin-left: -25%; */
+      position: absolute;
+      margin-top: 0;
+  }
+  #form__g {
+      left: 0;
+      right:5%;
+      top: 50%;
+      position: absolute;
+      margin-top: 0;
+  }
+  select {
+      width: 30%;
+  }
+
+}
