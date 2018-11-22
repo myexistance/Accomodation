@@ -112,6 +112,13 @@
 
     <div class="modal-content">
           <div class="modal-header">
+            <!-- indication of user input -->
+            <div>
+            <h4 id="noDays"></h4>
+            </div>
+            <div>
+            <h4 id="numGuest"></h4>
+            </div>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
       <div class="modal-body">
@@ -132,7 +139,7 @@
                 <form id="form" class="container text-center" onsubmit="dateDiff()">
 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <label for="startDate"> Starting Date </label>
+                     <label for="startDate"> Check in : </label>
                      <input type="text" id="startDate" name="startDate" autocomplete="off">
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -140,10 +147,12 @@
 
 
 
-                     <label for="endDate"> Ending Date </label>
+                     <label for="endDate"> Check out : </label>
                      <input type="text" id="endDate" name="endDate" autocomplete="off">
-                     <button type="button" name="button"><a href="#guest" data-toggle="tab">next</a></button>
-                     <!-- <p><a href="#guest" data-toggle="tab">To guest</a>.</p> -->
+
+
+                     <button type="button" name="button" onclick="dateDiff()"><a href="#guest" data-toggle="tab">next</a></button>
+
 
 
                  </form>
@@ -153,15 +162,15 @@
                 <br>
                 <form id="form__g" class="container text-center">
                   <p>How many guests are staying?</p>
-                  <select name="numberOfGuests" class="custom-select select__Length">
-                    <option value="guest1">1</option>
-                    <option value="guest2">2</option>
-                    <option value="guest3">3</option>
-                    <option value="guest4">4</option>
-                    <option value="guest5">5</option>
-                    <option value="guest6">6</option>
+                  <select id="noGuest" name="numberOfGuests" class="custom-select select__Length">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
                   </select>
-                  <button type="button" name="button"><a href="#total" data-toggle="tab">next</a></button>
+                  <button type="button" name="button" onclick="noGuests()"><a href="#total" data-toggle="tab">next</a></button>
                   <!-- <p><a href="#total" data-toggle="tab">To total</a>.</p> -->
                 </form>
               </div>
