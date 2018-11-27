@@ -3,7 +3,9 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+
 
     <!-- Bootstrap CSS -->
     <!-- Font Awesome -->
@@ -15,7 +17,8 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- CSS -->
+
+      <link rel="stylesheet" href="swiper/dist/css/swiper.min.css"><!-- CSS -->
 
     <!-- JAVASCRIPT -->
     <!-- JQuery -->
@@ -31,7 +34,8 @@
   <nav class="navbar navbar-expand-sm bg-light justify-content-center">
   <a class="navbar-brand" href="index.html"><strong>ROOM 121</strong></a>
   </nav>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <img class="pure" src="images/pure.jpg" alt="">
+  <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
        <ol class="carousel-indicators">
          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
          <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -74,34 +78,13 @@
          <span class="carousel-control-next-icon" aria-hidden="true"></span>
          <span class="sr-only">Next</span>
        </a>
-     </div>
+     </div> -->
   <body>
     <br>
-    <h2 class="text-center">Central Studio w/ Veranda</h2>
-    <div class="container text-center">
-          <div class="row">
-            <div class="col">
-              Up to 4 guests
-            </div>
-            <div class="col">
-              2 beds
-            </div>
-          </div><br>
-          <div class="row">
-            <div class="col">
-              1 bathroom
-            </div>
-            <div class="col">
-              Wifi
-            </div>
-          </div>
-    </div>
-    <br>
-    <br>
-<!-- Caculate  Button -->
+<!-- Reserve your stay  Button -->
       <div class="text-center">
           <button type="button" class="btn btn-primary link-modal" data-toggle="modal" data-target="#exampleModalBottom">
-            Calculate
+            Reserve your stay
           </button>
       </div>
 
@@ -124,19 +107,18 @@
       <div class="modal-body">
         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="date-tab" data-toggle="tab" href="#date" role="tab" aria-controls="date" aria-selected="true">Dates</a>
+                <a class="nav-link active" id="date-tab" data-toggle="tab" href="#date" role="tab" aria-controls="date" aria-selected="true">Dates & Guests</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="guest-tab" data-toggle="tab" href="#guest" role="tab" aria-controls="guest" aria-selected="false">Guests</a>
+                <a class="nav-link" id="filtered-tab" data-toggle="tab" href="#filtered" role="tab" aria-controls="filtered" aria-selected="false">Filtered</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="total-tab" data-toggle="tab" href="#total" role="tab" aria-controls="total" aria-selected="false">Total</a>
-              </li>
+
         </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="date" role="tabpanel" aria-labelledby="date-tab">
                 <br>
-                <form id="form" class="container text-center" onsubmit="dateDiff()">
+
+                <form id="form" class="container text-center">
 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label for="startDate"> Check in : </label>
@@ -149,38 +131,128 @@
 
                      <label for="endDate"> Check out : </label>
                      <input type="text" id="endDate" name="endDate" autocomplete="off">
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
 
 
-                     <button type="button" name="button" onclick="dateDiff()"><a href="#guest" data-toggle="tab">next</a></button>
+
+
+                     <!-- <button type="button" name="button" onclick="dateDiff()"><a href="#guest" data-toggle="tab">next</a></button> -->
+
+                     <p>How many guests are staying?</p>
+                     <select id="noGuest" name="numberOfGuests" class="custom-select select__Length">
+                       <option>1</option>
+                       <option>1-2</option>
+                       <option>2-4</option>
+                       <option>1-4</option>
+                     </select>
+                     <br>
+                     <br>
+                     <button type="button" name="button" onclick="calculate()"><a href="#filtered" data-toggle="tab">next</a></button>
 
 
 
                  </form>
 
               </div>
-              <div class="tab-pane fade" id="guest" role="tabpanel" aria-labelledby="guest-tab">
+<div class="tab-pane fade" id="filtered" role="tabpanel" aria-labelledby="filtered-tab">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+  <div class="swiper-slide" >
+        <div class="imgBx">
+          <img src="images/Berlin5.jpeg" alt="Image">
+        </div>
+
+        <div class="details">
+          <h3> Caption <br> <span>Description</span></h3>
+
+        </div>
+      </div>
+
+      <div class="swiper-slide" >
+            <div class="imgBx">
+              <img src="images/Berlin6.jpeg" alt="Image">
+            </div>
+
+            <div class="details">
+              <h3> Caption <br> <span>Description</span></h3>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide" >
+               <div class="imgBx">
+                 <img src="images/Berlin8.jpeg" alt="Image">
+               </div>
+
+               <div class="details">
+                 <h3> Caption <br> <span>Description</span></h3>
+
+               </div>
+             </div>
+
+
+</div>
+<!-- Add Pagination -->
+<div class="swiper-pagination"></div>
+</div>
+
                 <br>
-                <form id="form__g" class="container text-center">
-                  <p>How many guests are staying?</p>
-                  <select id="noGuest" name="numberOfGuests" class="custom-select select__Length">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
-                  <button type="button" name="button" onclick="noGuests()"><a href="#total" data-toggle="tab">next</a></button>
-                  <!-- <p><a href="#total" data-toggle="tab">To total</a>.</p> -->
+                <!-- <form id="form__g" class="container"> -->
+                <form class="container">
+                  <div class ="container">
+                    <div class="row no-gutter">
+                        <div class="col-md-12 my__col">
+                        <div class="cbd lBlack cappuccino flight">
+                          <div class="results__image no-padding">
+                            <img class= "coffee__shop" id="arabica" src="images/Berlin5.jpeg" alt="Berlin5">
+                          </div>
+                          <div class="results__description">
+                            <h3 class="results__cafe no-padding">$30 / Night</h3>
+                            <h4 class ="results__location no-padding">CBD</h4>
+                            <p class="results__coffeetype no-padding">Accomdation types: <br>Hostel</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star unchecked"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 my__col">
+                      <div class="cbd lBlack cappuccino flight">
+                        <div class="results__image no-padding">
+                          <img class= "coffee__shop" id="arabica" src="images/Berlin5.jpeg" alt="Berlin5">
+                        </div>
+                        <div class="results__description">
+                          <h3 class="results__cafe no-padding">$30 / Night</h3>
+                          <h4 class ="results__location no-padding">CBD</h4>
+                          <p class="results__coffeetype no-padding">Accomdation types: <br>Hostel</p>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star unchecked"></span>
+                        </div>
+                      </div>
+                    </div>
+                    </div><!--row-->
+                  </div> <!--container-->
+
+
                 </form>
               </div>
-              <div class="tab-pane fade" id="total" role="tabpanel" aria-labelledby="total-tab">...</div>
+
             </div>
       </div>
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
 
         <button type="button" class="btn btn-primary">BOOK</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -201,7 +273,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
+     <script src="swiper/dist/js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
