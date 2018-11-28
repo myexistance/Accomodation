@@ -3,7 +3,7 @@
 /*//FONTS//*/
 .pure {
   width: 100%;
-  height: 80%; }
+  height: 100%; }
 
 .btn-danger {
   background-color: #e60000 !important; }
@@ -41,7 +41,7 @@
 
 .ui-datepicker-calendar {
   background: white;
-  color: #FFFFFF; }
+  color: #404040; }
 
 .ui-datepicker-header {
   text-align: center;
