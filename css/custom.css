@@ -8,33 +8,14 @@ nav a {
 
 }
 
-.pure {
-  width: 100%;
-  height: 80%;
-}
 
-.link-modal{
-    background-color: red;
-    width: 80%;
-    text-align: center;
-    padding-top: 400px;
 
-}
-/* modal */
-.modal-body {
-    height:800px;
-    width: 100%;
-    overflow-y: auto;
-}
-
-.modal-backdrop {
-  background-color: transparent !important;
-}
 
 #form {
-    left: 10%;
-    right:10%;
+    left: 30%;
+    right:30%;
     top: 20%;
+    bottom: 20%;
     /* margin-left: -25%; */
     position: absolute;
     margin-top: 0;
@@ -49,18 +30,10 @@ nav a {
 }
 
 select {
-    width: 50%;
+    width: 40%;
 }
 
-/* search result */
-.no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
-}
-.col::after {
-	clear: left;
 
-}
 /* swiper */
 
 .swiper-container {

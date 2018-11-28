@@ -13,7 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="mainsass/css/custom.css">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -31,10 +31,11 @@
 
     <title>ROOM 121</title>
   </head>
-  <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+  <!-- <nav class="navbar navbar-expand-sm bg-light justify-content-center">
   <a class="navbar-brand" href="index.html"><strong>ROOM 121</strong></a>
-  </nav>
+  </nav> -->
   <img class="pure" src="images/pure.jpg" alt="">
+
   <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
        <ol class="carousel-indicators">
          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -83,7 +84,7 @@
     <br>
 <!-- Reserve your stay  Button -->
       <div class="text-center">
-          <button type="button" class="btn btn-primary link-modal" data-toggle="modal" data-target="#exampleModalBottom">
+          <button type="button" class="btn btn-danger link-modal" data-toggle="modal" data-target="#exampleModalBottom">
             Reserve your stay
           </button>
       </div>
@@ -106,10 +107,10 @@
           </div>
       <div class="modal-body">
         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-              <li class="nav-item">
+              <li class="nav-item tColor">
                 <a class="nav-link active" id="date-tab" data-toggle="tab" href="#date" role="tab" aria-controls="date" aria-selected="true">Dates & Guests</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item tColor">
                 <a class="nav-link" id="filtered-tab" data-toggle="tab" href="#filtered" role="tab" aria-controls="filtered" aria-selected="false">Filtered</a>
               </li>
 
@@ -122,7 +123,7 @@
 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <label for="startDate"> Check in : </label>
-                     <input type="text" id="startDate" name="startDate" autocomplete="off">
+                     <input class="dateWidth" type="text" id="startDate" name="startDate" autocomplete="off">
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -130,15 +131,16 @@
 
 
                      <label for="endDate"> Check out : </label>
-                     <input type="text" id="endDate" name="endDate" autocomplete="off">
+                     <input class="dateWidth" type="text" id="endDate" name="endDate" autocomplete="off">
                      <br>
                      <br>
                      <br>
                      <br>
                      <br>
                      <br>
-
-
+                     <br>
+                     <br>
+                     <br>
 
 
                      <!-- <button type="button" name="button" onclick="dateDiff()"><a href="#guest" data-toggle="tab">next</a></button> -->
@@ -152,6 +154,13 @@
                      </select>
                      <br>
                      <br>
+                     <p>Add Breakfast?</p>
+                     <select id="noGuest" name="numberOfGuests" class="custom-select select__Length">
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                     <br>
+                     <br>
                      <button type="button" name="button" onclick="calculate()"><a href="#filtered" data-toggle="tab">next</a></button>
 
 
@@ -159,102 +168,81 @@
                  </form>
 
               </div>
+<!-- Filtered Result -->
 <div class="tab-pane fade" id="filtered" role="tabpanel" aria-labelledby="filtered-tab">
-<div class="swiper-container">
-<div class="swiper-wrapper">
-  <div class="swiper-slide" >
-        <div class="imgBx">
-          <img src="images/Berlin5.jpeg" alt="Image">
+  <div class ="container-fluid container-results">
+  <div class="row no-gutter">
+
+    <div class="col-sm-12 col-md-6 my__col">
+        <div class="results__image no-padding">
+          <img class= "accomodation__img" id="hostel30" src="images/Hostel30/Hostel1.jpeg" alt="Hostel30">
         </div>
-
-        <div class="details">
-          <h3> Caption <br> <span>Description</span></h3>
-
+        <div class="results__description">
+          <h3 class="results__price no-padding">&nbsp;&nbsp;$30/day</h3>
+          <h4 class ="results__guest no-padding">&nbsp;&nbsp;Guests: 1 Person</h4>
+          <h4 class ="results__stay no-padding">&nbsp;&nbsp;Availability: min 1 night, max 10 nights</h4>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
         </div>
-      </div>
-
-      <div class="swiper-slide" >
-            <div class="imgBx">
-              <img src="images/Berlin6.jpeg" alt="Image">
-            </div>
-
-            <div class="details">
-              <h3> Caption <br> <span>Description</span></h3>
-
-            </div>
-          </div>
-
-          <div class="swiper-slide" >
-               <div class="imgBx">
-                 <img src="images/Berlin8.jpeg" alt="Image">
-               </div>
-
-               <div class="details">
-                 <h3> Caption <br> <span>Description</span></h3>
-
-               </div>
-             </div>
-
-
-</div>
-<!-- Add Pagination -->
-<div class="swiper-pagination"></div>
-</div>
-
-                <br>
-                <!-- <form id="form__g" class="container"> -->
-                <form class="container">
-                  <div class ="container">
-                    <div class="row no-gutter">
-                        <div class="col-md-12 my__col">
-                        <div class="cbd lBlack cappuccino flight">
-                          <div class="results__image no-padding">
-                            <img class= "coffee__shop" id="arabica" src="images/Berlin5.jpeg" alt="Berlin5">
-                          </div>
-                          <div class="results__description">
-                            <h3 class="results__cafe no-padding">$30 / Night</h3>
-                            <h4 class ="results__location no-padding">CBD</h4>
-                            <p class="results__coffeetype no-padding">Accomdation types: <br>Hostel</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star unchecked"></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-12 my__col">
-                      <div class="cbd lBlack cappuccino flight">
-                        <div class="results__image no-padding">
-                          <img class= "coffee__shop" id="arabica" src="images/Berlin5.jpeg" alt="Berlin5">
-                        </div>
-                        <div class="results__description">
-                          <h3 class="results__cafe no-padding">$30 / Night</h3>
-                          <h4 class ="results__location no-padding">CBD</h4>
-                          <p class="results__coffeetype no-padding">Accomdation types: <br>Hostel</p>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star unchecked"></span>
-                        </div>
-                      </div>
-                    </div>
-                    </div><!--row-->
-                  </div> <!--container-->
-
-
-                </form>
-              </div>
-
-            </div>
-      </div>
-      <!-- <div class="modal-footer">
-
-        <button type="button" class="btn btn-primary">BOOK</button>
-      </div> -->
     </div>
-  </div>
+
+      <div class="col-sm-12 col-md-6 my__col">
+          <div class="results__image no-padding">
+            <img class= "accomodation__img" id="hostel157" src="images/Hostel157/2Hostel1.jpeg" alt="Hostel157">
+          </div>
+          <div class="results__description">
+            <h3 class="results__price no-padding">&nbsp;&nbsp;$157/day</h3>
+            <h4 class ="results__guest no-padding">&nbsp;&nbsp;Guests: 1-2 People</h4>
+            <h4 class ="results__stay no-padding">&nbsp;&nbsp;Availability: min 1 night, max 5 nights</h4>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span>
+          </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 my__col">
+        <div class="results__image no-padding">
+          <img class= "accomodation__img" id="Motel" src="images/Motel/Motel1.jpeg" alt="Motel">
+        </div>
+        <div class="results__description">
+          <h3 class="results__price no-padding">&nbsp;&nbsp;$90/day</h3>
+          <h4 class ="results__guest no-padding">&nbsp;&nbsp;Guests: 2-4 People</h4>
+          <h4 class ="results__stay no-padding">&nbsp;&nbsp;Availability: min 3 nights, max 10 nights</h4>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+        </div>
+    </div>
+<!--     </div> -->
+
+<!--   <div class="row no-gutter"> -->
+
+    <div class="col-sm-12 col-md-6 my__col">
+        <div class="results__image no-padding">
+          <img class= "accomodation__img" id="blackCoffee" src="images/House/Berlin1.jpeg" alt="Black Coffee Cafe">
+        </div>
+        <div class="results__description">
+          <h3 class="results__price no-padding">&nbsp;&nbsp;$240/day</h3>
+          <h4 class ="results__guest no-padding">&nbsp;&nbsp;Guests: 1-4 People</h4>
+          <h4 class ="results__stay no-padding">&nbsp;&nbsp;Availability: min 2 nights, max 15 nights</h4>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+
+
+    </div><!--row-->
+ </div> <!--container-->
 </div>
 
     <!-- Optional JavaScript -->

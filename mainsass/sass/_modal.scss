@@ -1,0 +1,52 @@
+.link-modal{
+    background-color: #e60000 !important;
+    width: 95%;
+    height: auto;
+    text-align: center;
+    padding-top: 400px;
+
+}
+/* modal */
+.modal-body {
+    height:650px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.modal-backdrop {
+  background-color: transparent !important;
+}
+
+.dateWidth {
+  width: 420px;
+}
+
+/* tabs */
+.tColor {
+  color: #D3D3D3;
+  background-color: #404040;
+}
+
+
+/* datepicker */
+#datepicker,
+.ui-datepicker,
+.ui-datepicker-header,
+.ui-datepicker-calendar {
+  width: 95%;
+}
+.ui-datepicker-calendar {
+  background: white;
+  color: #FFFFFF;
+}
+.ui-datepicker-header {
+  text-align: center;
+  color: #FFF;
+  background: #000;
+}
+.ui-datepicker-prev {
+  float: left;
+}
+.ui-datepicker-next {
+  float: right;
+}

@@ -1,0 +1,105 @@
+/*//VARIABLES//*/
+/*//COLORS//*/
+/*//FONTS//*/
+.pure {
+  width: 100%;
+  height: 80%; }
+
+.btn-danger {
+  background-color: #e60000 !important; }
+
+.link-modal {
+  background-color: #e60000 !important;
+  width: 95%;
+  height: auto;
+  text-align: center;
+  padding-top: 400px; }
+
+/* modal */
+.modal-body {
+  height: 650px;
+  width: 100%;
+  overflow-y: auto; }
+
+.modal-backdrop {
+  background-color: transparent !important; }
+
+.dateWidth {
+  width: 420px; }
+
+/* tabs */
+.tColor {
+  color: #D3D3D3;
+  background-color: #404040; }
+
+/* datepicker */
+#datepicker,
+.ui-datepicker,
+.ui-datepicker-header,
+.ui-datepicker-calendar {
+  width: 95%; }
+
+.ui-datepicker-calendar {
+  background: white;
+  color: #FFFFFF; }
+
+.ui-datepicker-header {
+  text-align: center;
+  color: #FFF;
+  background: #000; }
+
+.ui-datepicker-prev {
+  float: left; }
+
+.ui-datepicker-next {
+  float: right; }
+
+/* search result */
+.results__image {
+  float: left;
+  width: 38%;
+  max-width: 100%;
+  height: 100%;
+  display: block; }
+
+.coffee__shop {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.col::after {
+  clear: left; }
+
+.accomodation__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.results__price {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #292F3A;
+  font-weight: 700;
+  font-size: 30px; }
+
+.results__guest {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #292F3A;
+  font-weight: 100;
+  font-size: 17px; }
+
+.results__stay {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #292F3A;
+  font-weight: 100;
+  font-size: 17px; }
+
+.no-padding {
+  margin-bottom: 0 !important; }
+
+/*# sourceMappingURL=custom.css.map */
