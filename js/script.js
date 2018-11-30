@@ -1,3 +1,5 @@
+
+
 //Date datepicker
 $(function(){
     $('#startDate').datepicker();
@@ -16,10 +18,7 @@ function calculate() {
    document.getElementById("numGuest").innerHTML = g + " Guest(s)  " ;
 }
 
-// function noGuests() {
-//   var g = document.getElementById('noGuest').value;
-//   document.getElementById("numGuest").innerHTML = g + " Guest(s)  " ;
-// }
+
 // Jumping between tabs in the modal
 $(function () {
     $('#date a').click(function (e) {
@@ -38,20 +37,20 @@ $(function () {
     })
 });
 
-
-var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows : true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+// Swiper
+// var swiper = new Swiper('.swiper-container', {
+//       effect: 'coverflow',
+//       grabCursor: true,
+//       centeredSlides: true,
+//       slidesPerView: 'auto',
+//       coverflowEffect: {
+//         rotate: 50,
+//         stretch: 0,
+//         depth: 100,
+//         modifier: 1,
+//         slideShadows : true,
+//       },
+//       pagination: {
+//         el: '.swiper-pagination',
+//       },
+//     });

@@ -1,12 +1,24 @@
 /*//VARIABLES//*/
 /*//COLORS//*/
 /*//FONTS//*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
 .pure {
   width: 100%;
-  height: 70vh; }
+  height: 100vh; }
 
 .btn-danger {
-  background-color: #e60000 !important; }
+  background-color: #e60000 !important;
+  transform: translate(0px, -350px);
+  width: 60%; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
 
 .link-modal {
   background-color: #e60000 !important;
@@ -16,21 +28,24 @@
   padding-top: 400px; }
 
 /* modal */
+.indicateFont {
+  font-family: "Exo 2", sans-serif; }
+
 .modal-body {
-  height: 94.5vh;
+  height: 94vh;
   width: 100%;
   overflow-y: auto; }
 
 .modal-backdrop {
-  background-color: gray !important; }
+  background-color: #555555 !important; }
 
 .dateWidth {
   width: 420px; }
 
 /* tabs */
 .tColor {
-  color: #D3D3D3;
-  background-color: #404040; }
+  color: #404040;
+  background-color: #D3D3D3; }
 
 /* datepicker */
 #datepicker,
@@ -62,7 +77,7 @@
 .modalContain {
   margin: 0 auto;
   background-color: gray;
-  width: 70%; }
+  width: 100%; }
 
 .modal__text {
   color: #F6F6FA;
@@ -71,10 +86,15 @@
   font-weight: regular;
   letter-spacing: 3px; }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
 /* search result */
 .results__image {
   float: left;
-  width: 38%;
+  width: 40%;
   max-width: 100%;
   height: 100%;
   display: block; }
@@ -95,28 +115,33 @@
 .accomodation__img {
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 16vh;
   display: block; }
 
 .results__price {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Exo 2", sans-serif;
   color: #292F3A;
   font-weight: 700;
   font-size: 30px; }
 
 .results__guest {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Exo 2", sans-serif;
   color: #292F3A;
   font-weight: 100;
   font-size: 17px; }
 
 .results__stay {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Exo 2", sans-serif;
   color: #292F3A;
   font-weight: 100;
   font-size: 17px; }
 
 .no-padding {
   margin-bottom: 0 !important; }
+
+.makeBooking {
+  background-color: #696969;
+  color: #FFFFFF;
+  transform: translate3d(200, 0); }
 
 /*# sourceMappingURL=custom.css.map */

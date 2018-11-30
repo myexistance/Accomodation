@@ -17,8 +17,9 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-      <link rel="stylesheet" href="swiper/dist/css/swiper.min.css"><!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="swiper/dist/css/swiper.min.css"> -->
+    <!-- CSS -->
 
     <!-- JAVASCRIPT -->
     <!-- JQuery -->
@@ -95,14 +96,15 @@
   <div class="modal-dialog modal-fluid modal-frame modal-bottom" role="document">
 
     <div class="modal-content">
+
           <div class="modal-header">
             <!-- indication of user input -->
-            <br>
+
             <div>
-            <h4 id="noDays"></h4>
+            <h5 class="indicateFont" id="noDays"></h5>
             </div>
             <div>
-            <h4 id="numGuest"></h4>
+            <h5 class="indicateFont" id="numGuest"></h5>
             </div>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
@@ -156,7 +158,7 @@
                      <br>
                      <br>
                      <p>Add Breakfast?</p>
-                     <select id="noGuest" name="numberOfGuests" class="custom-select select__Length">
+                     <select id="bFast" name="breakFast" class="custom-select select__Length">
                        <option>Yes</option>
                        <option>No</option>
                      </select>
@@ -171,10 +173,11 @@
               </div>
 <!-- Filtered Result -->
 <div class="tab-pane fade" id="filtered" role="tabpanel" aria-labelledby="filtered-tab">
-  <div class ="container-fluid container-results"> <!-- CONTAINER STARTS -->
-  <div class="row no-gutter"> <!-- ROW STARTS -->
+  <div class ="container-fluid"> <!-- CONTAINER STARTS -->
+  <div class="row"> <!-- ROW STARTS -->
 
 <!-- Hostel30 WINDOW     -->
+<hr>
     <div class="col-sm-12 col-md-6 my__col" id="hostel30Get">
         <div class="results__image no-padding">
           <img class= "accomodation__img" id="hostel30" src="images/Hostel30/Hostel1.jpeg" alt="Hostel30">
@@ -183,13 +186,17 @@
           <h3 class="results__price no-padding">&nbsp;&nbsp;$30/day</h3>
           <h4 class ="results__guest no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Guests: 1 Person</h4>
           <h4 class ="results__stay no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Availability: min 1 night, max 10 nights</h4>
+          &nbsp;&nbsp;&nbsp;
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star unchecked"></span><br>
-          <button data-toggle="modal" href="#stack2">Make Booking</button>
+          <span class="fa fa-star unchecked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <button class="makeBooking" data-toggle="modal" href="#stack2">Make Booking</button>
+
         </div>
+        <hr>
     </div>
 
 <!-- Hostel30 Modal -->
@@ -203,24 +210,13 @@
                   <div class="col-sm-9 modal__info">
                       <div class="modal__name">
                         <h1 class="modal__text">Hostel 30</h1>
+                        <h6 class="modal__text">Ref#4747883</h6>
                       </div>
                       <div class="modal__address">
-                          <h2 class="modal__text">O'Reily Avenue, Te Aro, Wellington</h2>
+                          <h6 class="modal__text">O'Reily Avenue, Te Aro, Wellington</h6>
+                          <h6 class="modal__text">(04) 473 7697</h6>
                       </div>
                       <br>
-                      <div class="modal__phone">
-
-                          <h2 class="modal__text">(04) 473 7697</h2>
-                      </div>
-                      <br>
-                      <div class="modal__url">
-                          <img class="modal__icons" src="images/svg/www.svg">
-                          <h2 class="modal__text">arabicacafe.co.nz</h2>
-                      </div>
-                      <br>
-                      <div class="modal__ratings">
-                          <img class="modal__icons stars" src="images/svg/star4.svg">
-                      </div>
                   </div>
                   <div class="col-sm-3 modal__logo">
                       <img src="images/svg/logo.svg" alt="">
@@ -236,6 +232,7 @@
 
 
 <!-- Hostel157 WINDOW     -->
+<hr>
       <div class="col-sm-12 col-md-6 my__col">
           <div class="results__image no-padding">
             <img class= "accomodation__img" id="hostel157" src="images/Hostel157/2Hostel1.jpeg" alt="Hostel157">
@@ -244,13 +241,17 @@
             <h3 class="results__price no-padding">&nbsp;&nbsp;$157/day</h3>
             <h4 class ="results__guest no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Guests: 1-2 People</h4>
             <h4 class ="results__stay no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Availability: min 1 night, max 5 nights</h4>
-            <span class="fa fa-star checked">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            &nbsp;&nbsp;&nbsp;
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <span class="fa fa-star unchecked"></span><br>
-            <button data-toggle="modal" href="#stack2">Make Booking</button>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button class="makeBooking" data-toggle="modal" href="#stack2">Make Booking</button>
+
           </div>
+          <hr>
       </div>
 
 <!-- Hostel157 Modal -->
@@ -299,24 +300,30 @@
 
 
 <!-- Motel WINDOW     -->
+<hr>
       <div class="col-sm-12 col-md-6 my__col">
         <div class="results__image no-padding">
           <img class= "accomodation__img" id="Motel" src="images/Motel/Motel1.jpeg" alt="Motel">
         </div>
         <div class="results__description">
           <h3 class="results__price no-padding">&nbsp;&nbsp;$90/day</h3>
-          <h4 class ="results__guest no-padding">&nbsp;&nbsp;Guests: 2-4 People</h4>
-          <h4 class ="results__stay no-padding">&nbsp;&nbsp;Availability: min 3 nights, max 10 nights</h4>
+          <h4 class ="results__guest no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Guests: 2-4 People</h4>
+          <h4 class ="results__stay no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Availability: min 3 nights, max 10 nights</h4>
+          &nbsp;&nbsp;&nbsp;
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star unchecked"></span><br>
-          <button data-toggle="modal" href="#stack2">Make Booking</button>
+          <span class="fa fa-star unchecked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <button class="makeBooking" data-toggle="modal" href="#stack2">Make Booking</button>
+
         </div>
+        <hr>
     </div>
 
 <!-- Motel Modal -->
+<hr>
 <div id="stack2" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
   <div class="modal-dialog modal-fluid modal-frame modal-bottom" role="document">
   <div class="modal-body">
@@ -369,15 +376,19 @@
         </div>
         <div class="results__description">
           <h3 class="results__price no-padding">&nbsp;&nbsp;$240/day</h3>
-          <h4 class ="results__guest no-padding">&nbsp;&nbsp;Guests: 1-4 People</h4>
-          <h4 class ="results__stay no-padding">&nbsp;&nbsp;Availability: min 2 nights, max 15 nights</h4>
+          <h4 class ="results__guest no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Guests: 1-4 People</h4>
+          <h4 class ="results__stay no-padding">&nbsp;&nbsp;&nbsp;&nbsp;Availability: min 2 nights, max 15 nights</h4>
+          &nbsp;&nbsp;&nbsp;
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span><br>
-          <button data-toggle="modal" href="#stack2">&nbsp;&nbsp;Make Booking</button>
+          <span class="fa fa-star checked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <button class="makeBooking" data-toggle="modal" href="#stack2">Make Booking</button>
+
         </div>
+        <hr>
       </div>
 
 <!-- House modal     -->
