@@ -79,39 +79,54 @@ if ((guests < 2 ) && (days<=5)) {
   $("#hostel30Get").show();
   $("#hotel157Get").show();
   $("#houseGet").show();
-}
+} else
 if ((guests < 2 ) && (days<=10)) {
+  $("#hostel30Get").hide();
   $("#hotel157Get").hide();
-  $("##motelGet").hide();
-  $("#hostel30Get").show();
+  $("##motelGet").show();
   $("#houseGet").show();
 
-}
-/*if ((guests >= 2 ) && (days<=10)) {
-  $("#motelGet").show();
+} else
+if ((guests >= 3 ) && (days<=10)) {
   $("#hostel30Get").hide();
-  $("#hotel157Get").show();
+  $("#hotel157Get").hide();
+  $("#motelGet").show();
   $("#houseGet").show();
-}
-if ((guests <=2 ) && (days<=15)) {
+} else
+if ((guests >= 3 ) && (days<=15)) {
   $("#hostel30Get").hide();
-  $("#motelGet").show();
-  $("#hotel157Get").show();
+  $("#hotel157Get").hide();
+  $("#motelGet").hide();
   $("houseGet").show();
-}
-if ((guests <=3 ) && (days<=10)) {
-  $("#hostel30Get").hide();
-  $("#motelGet").show();
-  $("#hotel157Get").show();
-  $("#houseGet").show();
-}
-if ((guests <=4 ) && (days<=10)) {
-  $("#motelGet").show();
-  $("#houseGet").show();
+} else
+if ((guests >= 4 ) && (days<=10)) {
   $("#hostel30Get").hide();
   $("#hotel157Get").hide();
+  $("#motelGet").show();
+  $("#houseGet").show();
+} else
+if ((guests >= 4 ) && (days<=15)) {
+  $("#hostel30Get").hide();
+  $("#hotel157Get").hide();
+  $("#motelGet").hide();
+  $("#houseGet").show();
 
-}*/
+} else
+if ((guests >= 4 ) && (days>=2)) {
+  $("#hostel30Get").hide();
+  $("#hotel157Get").hide();
+  $("#motelGet").hide();
+  $("#houseGet").show();
+
+} else
+if ((guests >= 4 ) && (days>=3)) {
+  $("#hostel30Get").hide();
+  $("#hotel157Get").hide();
+  $("#houseGet").hide();
+  $("#motelGet").show();
+  
+
+}
 }
 //Make Booking for hostel $30
 function makeBooking30() {
@@ -159,12 +174,13 @@ var bfcost = 0;
 }
 
 //Make Booking for motel $90
-/*function makeBooking90() {
+function makeBooking90() {
+var bf;
 var bfcost = 0;
 
    var guests = document.getElementById('noGuest').value;
-   var bf = document.getElementById('bFast').value;
-   console.log(bf);
+  var bf = document.getElementById('bFast').value;
+  console.log(bf);
    if (bf=="Yes"){
 
      bfcost = 30;
@@ -172,6 +188,7 @@ var bfcost = 0;
    console.log(bf);
     var total = days * (90 + bfcost);
    // alert(days);
+
    document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
    document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
    document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
@@ -180,11 +197,12 @@ var bfcost = 0;
 }
 //Make Booking for house $240
 function makeBooking240() {
+var bf;
 var bfcost = 0;
 
    var guests = document.getElementById('noGuest').value;
-   var bf = document.getElementById('bFast').value;
-   console.log(bf);
+  var bf = document.getElementById('bFast').value;
+  console.log(bf);
    if (bf=="Yes"){
 
      bfcost = 30;
@@ -192,12 +210,13 @@ var bfcost = 0;
    console.log(bf);
     var total = days * (240 + bfcost);
    // alert(days);
+
    document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
    document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
    document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
    console.log(total);
-}*/
+}
 
 // function Validate() {
 //         var noGuest= document.getElementById("noGuest");
