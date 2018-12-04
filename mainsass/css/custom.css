@@ -9,17 +9,17 @@ body, html {
   margin: 0; }
 
 .pure {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  /* Full height */
-  height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%; }
 
 .btn-danger {
   background-color: #e60000 !important;
-  transform: translate(0px, -350px);
+  transform: translate(0px, 650px);
   width: 60%; }
 
 * {
