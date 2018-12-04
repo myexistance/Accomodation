@@ -77,42 +77,42 @@ function accom(){
 if ((guests < 2 ) && (days<=5)) {
   $("#motelGet").hide();
   $("#hostel30Get").show();
-  $("#hostel157Get").show();
+  $("#hotel157Get").show();
   $("#houseGet").show();
 }
-/*if ((guests < 2 ) && (days<=10)) {
-  $("#hostel157Get").show();
-  $("#hostel30Get").hide();
-  $("##motelGet").show();
+if ((guests < 2 ) && (days<=10)) {
+  $("#hotel157Get").hide();
+  $("##motelGet").hide();
+  $("#hostel30Get").show();
   $("#houseGet").show();
 
 }
-if ((g < 2 ) && (days<=10)) {
-  $("#motelGet").hide();
+/*if ((guests >= 2 ) && (days<=10)) {
+  $("#motelGet").show();
   $("#hostel30Get").hide();
-  $("#hostel157Get").show();
+  $("#hotel157Get").show();
   $("#houseGet").show();
 }
-if ((g <=2 ) && (days<=15)) {
+if ((guests <=2 ) && (days<=15)) {
   $("#hostel30Get").hide();
   $("#motelGet").show();
-  $("#hostel157Get").show();
+  $("#hotel157Get").show();
   $("houseGet").show();
 }
-if ((g <=3 ) && (days<=10)) {
+if ((guests <=3 ) && (days<=10)) {
   $("#hostel30Get").hide();
   $("#motelGet").show();
-  $("#hostel157Get").show();
+  $("#hotel157Get").show();
   $("#houseGet").show();
 }
-if ((g <=4 ) && (days<=10)) {
+if ((guests <=4 ) && (days<=10)) {
   $("#motelGet").show();
   $("#houseGet").show();
   $("#hostel30Get").hide();
-  $("#hostel157Get").hide();
+  $("#hotel157Get").hide();
 
-}
 }*/
+}
 //Make Booking for hostel $30
 function makeBooking30() {
 var bfcost = 0;
