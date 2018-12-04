@@ -1,102 +1,127 @@
 
 
+
 //Date datepicker
+var days;
 $(function(){
-    $('#startDate').datepicker();
-    $('#endDate').datepicker();
-  });
-
-  $("#startDate").datepicker({
-      dateFormat: 'yy-mm-dd',
-      changeMonth: true,
-      minDate: new Date(),
-      maxDate: '+1y',
-      onSelect: function(date){
-
-          var selectedDate = new Date(date);
-          var msecsInADay = 86400000;
-          var stDate = new Date(selectedDate.getTime() + msecsInADay);
-
-         //Set Minimum Date of EndDatePicker After Selected Date of StartDatePicker
-          $("#endDate").datepicker( "option", "minDate", stDate );
-          var enDate = new Date(selectedDate.getTime() + 15 * msecsInADay);
 
 
-          $("#endDate").datepicker( "option", "maxDate", enDate );
+   $("#startDate").datepicker({
+    dateFormat: 'yy-mm-dd',
+    changeMonth: true,
+    minDate: new Date(),
+    maxDate: '+1y',
+    onSelect: function(date){
 
-      }
-  });
+        var selectedDate = new Date(date);
+        var msecsInADay = 86400000;
+        var stDate = new Date(selectedDate.getTime() + msecsInADay);
 
-  $("#endDate").datepicker({
-      dateFormat: 'yy-mm-dd',
-      changeMonth: true
-  });
+       //Set Minimum Date of EndDatePicker After Selected Date of StartDatePicker
+        $("#endDate").datepicker( "option", "minDate", stDate );
+        var enDate = new Date(selectedDate.getTime() + 15 * msecsInADay);
+
+
+        $("#endDate").datepicker( "option", "maxDate", enDate );
+
+    }
+});
+
+$("#endDate").datepicker({
+    dateFormat: 'yy-mm-dd',
+    changeMonth: true,
+    onSelect : function(){
+    var start = $('#startDate').datepicker('getDate');
+    var end = $('#endDate').datepicker('getDate');
+     days   = (end - start)/1000/60/60/24;
+    console.log(days);
+    }
+});
+
+//Find the number of days between dates
+
+  /*function dateDiff() {
+    var start = $('#startDate').datepicker('getDate');
+    var end = $('#endDate').datepicker('getDate');
+    var days   = (end - start)/1000/60/60/24;
+    console.log(days);
+
+    document.getElementById("noDays").innerHTML = days ;
+    return days;
+  }*/
+
+
+
+});
 
   //Find the number of days between dates
-    function dateDiff() {
 
-      var start = $('#startDate').datepicker('getDate');
-      var end = $('#endDate').datepicker('getDate');
-      var days   = (end - start)/1000/60/60/24;
-      if (days > 15) {
-        alert ("Please choose dates less than 15 days")
-        $("#submit1").hide();
-        $('#startDate').focus();
-
-      }
-
-        $("#endDate").click(function(){
-          $("#submit1").show();
-        });
-
-      document.getElementById("noDays").value = days ;
-      return;
-    }
-var days;
+var  guests;
 //Find the number of days between dates
 function calculate() {
 
-   var start  = $('#startDate').datepicker('getDate');
-   var end = $('#endDate').datepicker('getDate');
-   days  = (end - start)/1000/60/60/24;
+
    // alert(days);
    document.getElementById("noDays").innerHTML = days + " Days   > " ;
-   var g = document.getElementById('noGuest').value;
-   document.getElementById("numGuest").innerHTML = g + " Guest(s)  " ;
+    guests= document.getElementById('noGuest').value;
+   document.getElementById("numGuest").innerHTML = guests + " Guest(s)  " ;
 }
 
 // filtering
+  $("#motelGet").show();
+  $("#hostel30Get").show();
+  $("#hostel157Get").show();
+  $("#houseGet").show();
+
 function accom(){
-if ((g < 2 ) && (days<=5)) {
-  show or hide
+if ((guests < 2 ) && (days<=5)) {
+  $("#motelGet").hide();
+  $("#hostel30Get").show();
+  $("#hostel157Get").show();
+  $("#houseGet").show();
+}
+/*if ((guests < 2 ) && (days<=10)) {
+  $("#hostel157Get").show();
+  $("#hostel30Get").hide();
+  $("##motelGet").show();
+  $("#houseGet").show();
+
 }
 if ((g < 2 ) && (days<=10)) {
-  show or hide
+  $("#motelGet").hide();
+  $("#hostel30Get").hide();
+  $("#hostel157Get").show();
+  $("#houseGet").show();
 }
-if ((g < 2 ) && (days<=15)) {
-  show or hide
-}
-if ((g <=2 ) && (days<=10)) {
-  show or hide
+if ((g <=2 ) && (days<=15)) {
+  $("#hostel30Get").hide();
+  $("#motelGet").show();
+  $("#hostel157Get").show();
+  $("houseGet").show();
 }
 if ((g <=3 ) && (days<=10)) {
-  show or hide
+  $("#hostel30Get").hide();
+  $("#motelGet").show();
+  $("#hostel157Get").show();
+  $("#houseGet").show();
 }
 if ((g <=4 ) && (days<=10)) {
-  show or hide
+  $("#motelGet").show();
+  $("#houseGet").show();
+  $("#hostel30Get").hide();
+  $("#hostel157Get").hide();
+
 }
-}
+}*/
 //Make Booking for hostel $30
 function makeBooking30() {
 var bfcost = 0;
-   // var start  = $('#startDate').datepicker('getDate');
-   // var end = $('#endDate').datepicker('getDate');
-   // var days  = (end - start)/1000/60/60/24;
-   var g = document.getElementById('noGuest').value;
+   //
+
    var bf = document.getElementById('bFast').value;
    console.log(bf);
    if (bf=="Yes"){
-     bf=""
+
      bfcost = 30;
    }
    console.log(bf);
@@ -104,23 +129,22 @@ var bfcost = 0;
    // alert(days);
 
    document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = g + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with " + bf + " breakfast ($30)" ;
+   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
    console.log(total);
 }
 
 //Make Booking for hostel $157
 function makeBooking157() {
+  var bf;
 var bfcost = 0;
-   // var start  = $('#startDate').datepicker('getDate');
-   // var end = $('#endDate').datepicker('getDate');
-   // var days  = (end - start)/1000/60/60/24;
-   var g = document.getElementById('noGuest').value;
-   var bf = document.getElementById('bFast').value;
-   console.log(bf);
+
+   var guests = document.getElementById('noGuest').value;
+  var bf = document.getElementById('bFast').value;
+  console.log(bf);
    if (bf=="Yes"){
-     bf=""
+
      bfcost = 30;
    }
    console.log(bf);
@@ -128,59 +152,52 @@ var bfcost = 0;
    // alert(days);
 
    document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = g + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with " + bf + " breakfast ($30)" ;
+   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
    console.log(total);
 }
 
 //Make Booking for motel $90
-function makeBooking90() {
+/*function makeBooking90() {
 var bfcost = 0;
-   // var start  = $('#startDate').datepicker('getDate');
-   // var end = $('#endDate').datepicker('getDate');
-   // var days  = (end - start)/1000/60/60/24;
-   var g = document.getElementById('noGuest').value;
+
+   var guests = document.getElementById('noGuest').value;
    var bf = document.getElementById('bFast').value;
    console.log(bf);
    if (bf=="Yes"){
-     bf=""
+
      bfcost = 30;
    }
    console.log(bf);
     var total = days * (90 + bfcost);
    // alert(days);
-
    document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = g + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with " + bf + " breakfast ($30)" ;
+   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
    console.log(total);
 }
-
 //Make Booking for house $240
 function makeBooking240() {
 var bfcost = 0;
-   // var start  = $('#startDate').datepicker('getDate');
-   // var end = $('#endDate').datepicker('getDate');
-   // var days  = (end - start)/1000/60/60/24;
-   var g = document.getElementById('noGuest').value;
+
+   var guests = document.getElementById('noGuest').value;
    var bf = document.getElementById('bFast').value;
    console.log(bf);
    if (bf=="Yes"){
-     bf=""
+
      bfcost = 30;
    }
    console.log(bf);
     var total = days * (240 + bfcost);
    // alert(days);
-
    document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = g + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with " + bf + " breakfast ($30)" ;
+   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
    console.log(total);
-}
+}*/
 
 // function Validate() {
 //         var noGuest= document.getElementById("noGuest");
