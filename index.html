@@ -150,10 +150,11 @@
 
                      <p>How many guests are staying?</p>
                      <select id="noGuest" name="numberOfGuests" class="custom-select select__Length">
+                       <option value="1">1</option>
                        <option>1</option>
-                       <option>1-2</option>
-                       <option>2-4</option>
-                       <option>1-4</option>
+                       <option>2</option>
+                       <option>3</option>
+                       <option>4</option>
                      </select>
                      <br>
                      <br>
@@ -164,7 +165,7 @@
                      </select>
                      <br>
                      <br>
-                     <button type="button" name="button" onclick="calculate(); Validate()"><a href="#filtered" data-toggle="tab">next</a></button>
+                     <button type="button" name="button" onclick="calculate();Validate()"><a href="#filtered" data-toggle="tab">next</a></button>
 
 
 
@@ -200,12 +201,14 @@
     </div>
 
 <!-- Hostel30 Modal -->
-<div id="stack2" class="modal fade bottom" tabindex="-1" data-focus-on="input:first">
+<!-- <div id="stack2" class="modal fade bottom" tabindex="-1" data-focus-on="input:first"> -->
+<div id="stack2" class="modal">
   <div class="modal-dialog modal-frame modal-bottom" role="document">
   <div class="modal-body">
     <div class="container modalContain" id="modal_hostel30">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.2362460011914!2d174.77708495144435!3d-41.30372394930271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd4fa9cf31f%3A0x4c43f1b70b2d422b!2sArabica+Cafe!5e0!3m2!1sen!2snz!4v1541552452708" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+              <span class="close">&times;</span>
+              <div id="map"></div>
               <div class="row">
                   <div class="col-sm-9 modal__info">
                       <div class="modal__name">
@@ -244,7 +247,7 @@
 
 <!-- Hostel157 WINDOW     -->
 <hr>
-      <div class="col-sm-12 col-md-6 my__col">
+      <div class="col-sm-12 col-md-6 my__col" id="hostel157Get">
           <div class="results__image no-padding">
             <img class= "accomodation__img" id="hostel157" src="images/Hostel157/2Hostel1.jpeg" alt="Hostel157">
           </div>
@@ -271,7 +274,7 @@
   <div class="modal-body">
     <div class="container modalContain" id="modal_hostel157">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.2362460011914!2d174.77708495144435!3d-41.30372394930271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd4fa9cf31f%3A0x4c43f1b70b2d422b!2sArabica+Cafe!5e0!3m2!1sen!2snz!4v1541552452708" width="100%" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <div id="mapHostel157"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
                     <div class="modal__name">
@@ -310,7 +313,7 @@
 
 <!-- Motel WINDOW     -->
 <hr>
-      <div class="col-sm-12 col-md-6 my__col">
+      <div class="col-sm-12 col-md-6 my__col" id="motelGet">
         <div class="results__image no-padding">
           <img class= "accomodation__img" id="Motel" src="images/Motel/Motel1.jpeg" alt="Motel">
         </div>
@@ -338,7 +341,7 @@
   <div class="modal-body">
     <div class="container modalContain" id="modal_motel90">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.2362460011914!2d174.77708495144435!3d-41.30372394930271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd4fa9cf31f%3A0x4c43f1b70b2d422b!2sArabica+Cafe!5e0!3m2!1sen!2snz!4v1541552452708" width="100%" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <div id="mapMotel"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
                     <div class="modal__name">
@@ -375,7 +378,7 @@
 
 
 <!-- House WINDOW     -->
-    <div class="col-sm-12 col-md-6 my__col">
+    <div class="col-sm-12 col-md-6 my__col" id="houseGet">
         <div class="results__image no-padding">
           <img class= "accomodation__img" id="House" src="images/House/House1.jpeg" alt="House">
         </div>
@@ -402,7 +405,7 @@
   <div class="modal-body">
     <div class="container modalContain" id="modal_house240">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.2362460011914!2d174.77708495144435!3d-41.30372394930271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd4fa9cf31f%3A0x4c43f1b70b2d422b!2sArabica+Cafe!5e0!3m2!1sen!2snz!4v1541552452708" width="100%" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <div id="mapHouse"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
                     <div class="modal__name">
@@ -460,5 +463,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
      <script src="swiper/dist/js/swiper.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmYvU9QpwVlxE5r5kW8l9i1NL8Km9Zy7s&callback=initMap"
+   async defer></script>
   </body>
 </html>

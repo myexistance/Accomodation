@@ -65,6 +65,27 @@ function calculate() {
    document.getElementById("numGuest").innerHTML = g + " Guest(s)  " ;
 }
 
+// filtering
+function accom(){
+if ((g < 2 ) && (days<=5)) {
+  show or hide
+}
+if ((g < 2 ) && (days<=10)) {
+  show or hide
+}
+if ((g < 2 ) && (days<=15)) {
+  show or hide
+}
+if ((g <=2 ) && (days<=10)) {
+  show or hide
+}
+if ((g <=3 ) && (days<=10)) {
+  show or hide
+}
+if ((g <=4 ) && (days<=10)) {
+  show or hide
+}
+}
 //Make Booking for hostel $30
 function makeBooking30() {
 var bfcost = 0;
@@ -193,6 +214,50 @@ $(function () {
     })
 });
 
+//google maps
+var map;
+//var newMarker;
+// var directionsService = new google.maps.DirectionsService();
+// var directionsDisplay = new google.maps.DirectionsRenderer();
+function initMap(){
+  map=new google.maps.Map(document.getElementById("map"),{
+    center: {lat: -41.2792, lng: 174.7803},
+    zoom: 8
+  });
+
+  marker = new google.maps.Marker({
+    position: {lat: -41.2792, lng: 174.7803},
+    map: map,
+    title: "Hostel30"
+  });
+  infowidow= new google.maps.InfoWindow({
+    content: "Wellington Stn lat: -41.2792, lng: 174.7803"
+  });
+   marker.addListener('click', function(){
+    infowidow.open(map, marker);
+   });
+
+
+// modal close
+
+
+  // map.addListener('click', function(event) {
+  //     console.log(event);
+  //
+  //     if(newMarker && newMarker.setMap) {
+  //       newMarker.setMap(null);
+  //     }
+  //
+  //
+  //     newMarker = new google.maps.Marker({
+  //       position: event.latLng,
+  //       map: map
+  //     });
+  //     showDirections(event.latLng);
+  // });
+
+}
+
 // Swiper
 // var swiper = new Swiper('.swiper-container', {
 //       effect: 'coverflow',
@@ -210,3 +275,9 @@ $(function () {
 //         el: '.swiper-pagination',
 //       },
 //     });
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
