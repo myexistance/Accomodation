@@ -38,7 +38,7 @@
   </nav> -->
   <img class="pure" src="images/pure.jpg" alt="">
 
-  
+
   <body>
     <br>
 <!-- Reserve your stay  Button -->
@@ -152,59 +152,57 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star unchecked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <button class="makeBooking" data-toggle="modal" href="#stack2" onclick="makeBooking30()">Make Booking</button>
+          <button class="makeBooking" data-toggle="modal" data-target="#modal-Hostel" onclick="makeBooking30()">Make Booking</button>
 
         </div>
         <hr>
     </div>
 
 <!-- Hostel30 Modal -->
-<!-- <div id="stack2" class="modal fade bottom" tabindex="-1" data-focus-on="input:first"> -->
-<!-- <div id="stack2" class="modal"> -->
-<div id="stack2" class="modal">
-  <div class="modal-dialog modal-frame modal-bottom" role="document">
-  <div class="modal-body">
-    <div class="container modalContain" id="modal_hostel30">
-              <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
-              <span class="close">&times;</span>
+<div class="modal fade" id="modal-Hostel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container modalContain" id="modal_hostel30">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <div id="map"></div>
               <div class="row">
-                  <div class="col-sm-9 modal__info">
-                      <div class="modal__name">
-                        <h1 class="modal__text"> Booking for</h1>
-                        <div>
-                        <h5 class="indicateFont" id="totalCostM"></h5>
-                        </div>
-                        <div>
-                        <h5 class="indicateFont" id="noDaysM"></h5>
-                        </div>
-                        <div>
-                        <h5 class="indicateFont" id="numGuestM"></h5>
-                        </div>
-                        <div>
-                          <h5 class="indicateFont" id="bFastM"></h5>
-                        </div>
-
-                        <h6 class="indicateFont">Ref#4747883</h6>
+                <div class="col-sm-9 modal__info">
+                    <div class="modal__name">
+                      <h1 class="modal__text"> Booking for</h1>
+                      <div>
+                      <h5 class="indicateFont" id="totalCostHostel"></h5>
                       </div>
-                      <div class="modal__address">
-                          <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
-                          <h6 class="indicateFont">(04) 473 7697</h6>
-                          <button class="makeBooking">Confirm</button>
+                      <div>
+                      <h5 class="indicateFont" id="noDaysHostel"></h5>
                       </div>
-                      <br>
-                  </div>
-              </div>
-          </div>
+                      <div>
+                      <h5 class="indicateFont" id="numGuestHostel"></h5>
+                      </div>
+                      <div>
+                        <h5 class="indicateFont" id="bFastHostel"></h5>
+                      </div>
 
-  </div>
+                      <h6 class="indicateFont">Ref#4747883</h6>
+                    </div>
+                    <div class="modal__address">
+                        <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
+                        <h6 class="indicateFont">(04) 473 7697</h6>
+                        <button class="makeBooking">Confirm</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+      </div>
 
-</div>
-</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 
-<!-- Hostel157 WINDOW     -->
+<!-- Hotel157 WINDOW     -->
 <hr>
       <div class="col-sm-12 col-md-6 my__col" id="hotel157Get">
           <div class="results__image no-padding">
@@ -221,34 +219,35 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star unchecked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-            <button class="makeBooking" data-toggle="modal" href="#stack2" onclick="makeBooking157()">Make Booking</button>
+            <button class="makeBooking" data-toggle="modal" data-target="#modal-Hotel" onclick="makeBooking157()">Make Booking</button>
 
           </div>
           <hr>
       </div>
 
 <!-- Hostel157 Modal -->
-<div id="stack2" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
-  <div class="modal-dialog modal-fluid modal-frame modal-bottom" role="document">
-  <div class="modal-body">
-    <div class="container modalContain" id="modal_hotel157">
+<div class="modal fade" id="modal-Hotel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container modalContain" id="modal_hostel157">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <div id="mapHostel157"></div>
+              <div id="map"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
                     <div class="modal__name">
                       <h1 class="modal__text"> Booking for</h1>
                       <div>
-                      <h5 class="indicateFont" id="totalCostM"></h5>
+                      <h5 class="indicateFont" id="totalCostHotel"></h5>
                       </div>
                       <div>
-                      <h5 class="indicateFont" id="noDaysM"></h5>
+                      <h5 class="indicateFont" id="noDaysHotel"></h5>
                       </div>
                       <div>
-                      <h5 class="indicateFont" id="numGuestM"></h5>
+                      <h5 class="indicateFont" id="numGuestHotel"></h5>
                       </div>
                       <div>
-                        <h5 class="indicateFont" id="bFastM"></h5>
+                        <h5 class="indicateFont" id="bFastHotel"></h5>
                       </div>
 
                       <h6 class="indicateFont">Ref#4747883</h6>
@@ -262,11 +261,11 @@
                 </div>
             </div>
         </div>
+      </div>
 
-</div>
-
-</div>
-</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 
@@ -287,35 +286,35 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star unchecked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <button class="makeBooking" data-toggle="modal" href="#stack2" onclick="makeBooking90()">Make Booking</button>
+          <button class="makeBooking" data-toggle="modal" data-target="#modal-Motel" onclick="makeBooking90()">Make Booking</button>
 
         </div>
         <hr>
     </div>
 
 <!-- Motel Modal -->
-<hr>
-<div id="stack2" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
-  <div class="modal-dialog modal-fluid modal-frame modal-bottom" role="document">
-  <div class="modal-body">
-    <div class="container modalContain" id="modal_motel90">
+<div class="modal fade" id="modal-Motel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container modalContain" id="modal_Motel">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <div id="mapMotel"></div>
+              <div id="map"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
                     <div class="modal__name">
                       <h1 class="modal__text"> Booking for</h1>
                       <div>
-                      <h5 class="indicateFont" id="totalCostM"></h5>
+                      <h5 class="indicateFont" id="totalCostMotel"></h5>
                       </div>
                       <div>
-                      <h5 class="indicateFont" id="noDaysM"></h5>
+                      <h5 class="indicateFont" id="noDaysMotel"></h5>
                       </div>
                       <div>
-                      <h5 class="indicateFont" id="numGuestM"></h5>
+                      <h5 class="indicateFont" id="numGuestMotel"></h5>
                       </div>
                       <div>
-                        <h5 class="indicateFont" id="bFastM"></h5>
+                        <h5 class="indicateFont" id="bFastMotel"></h5>
                       </div>
 
                       <h6 class="indicateFont">Ref#4747883</h6>
@@ -329,11 +328,11 @@
                 </div>
             </div>
         </div>
+      </div>
 
-</div>
-
-</div>
-</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 <!-- House WINDOW     -->
@@ -352,34 +351,35 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <button class="makeBooking" data-toggle="modal" href="#stack2" onclick="makeBooking240()">Make Booking</button>
+          <button class="makeBooking" data-toggle="modal" data-target="#modal-House" onclick="makeBooking240()">Make Booking</button>
 
         </div>
         <hr>
       </div>
 
 <!-- House modal     -->
-<div id="stack2" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
-  <div class="modal-dialog modal-fluid modal-frame modal-bottom" role="document">
-  <div class="modal-body">
-    <div class="container modalContain" id="modal_house240">
+<div class="modal fade" id="modal-House">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container modalContain" id="modal_house240">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <div id="mapHouse"></div>
+              <div id="map"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
                     <div class="modal__name">
                       <h1 class="modal__text"> Booking for</h1>
                       <div>
-                      <h5 class="indicateFont" id="totalCostM"></h5>
+                      <h5 class="indicateFont" id="totalCostHouse"></h5>
                       </div>
                       <div>
-                      <h5 class="indicateFont" id="noDaysM"></h5>
+                      <h5 class="indicateFont" id="noDaysHouse"></h5>
                       </div>
                       <div>
-                      <h5 class="indicateFont" id="numGuestM"></h5>
+                      <h5 class="indicateFont" id="numGuestHouse"></h5>
                       </div>
                       <div>
-                        <h5 class="indicateFont" id="bFastM"></h5>
+                        <h5 class="indicateFont" id="bFastHouse"></h5>
                       </div>
 
                       <h6 class="indicateFont">Ref#4747883</h6>
@@ -393,11 +393,11 @@
                 </div>
             </div>
         </div>
+      </div>
 
-</div>
-
-</div>
-</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
     </div><!--row-->
  </div> <!--container-->

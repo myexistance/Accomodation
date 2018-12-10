@@ -124,7 +124,7 @@ if ((guests >= 4 ) && (days>=3)) {
   $("#hotel157Get").hide();
   $("#houseGet").hide();
   $("#motelGet").show();
-  
+
 
 }
 }
@@ -143,10 +143,10 @@ var bfcost = 0;
     var total = days * (30 + bfcost);
    // alert(days);
 
-   document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
-   document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
+   document.getElementById("noDaysHostel").innerHTML = days + " Days   > " ;
+   document.getElementById("numGuestHostel").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastHostel").innerHTML = "with "  + " breakfast ($30)" ;
+   document.getElementById("totalCostHostel").innerHTML = total + " Dollars " ;
    console.log(total);
 }
 
@@ -166,10 +166,10 @@ var bfcost = 0;
     var total = days * (157 + bfcost);
    // alert(days);
 
-   document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
-   document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
+   document.getElementById("noDaysHotel").innerHTML = days + " Days   > " ;
+   document.getElementById("numGuestHotel").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastHotel").innerHTML = "with "  + " breakfast ($30)" ;
+   document.getElementById("totalCostHotel").innerHTML = total + " Dollars " ;
    console.log(total);
 }
 
@@ -189,10 +189,10 @@ var bfcost = 0;
     var total = days * (90 + bfcost);
    // alert(days);
 
-   document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
-   document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
+   document.getElementById("noDaysMotel").innerHTML = days + " Days   > " ;
+   document.getElementById("numGuestMotel").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastMotel").innerHTML = "with "  + " breakfast ($30)" ;
+   document.getElementById("totalCostMotel").innerHTML = total + " Dollars " ;
    console.log(total);
 }
 //Make Booking for house $240
@@ -211,10 +211,10 @@ var bfcost = 0;
     var total = days * (240 + bfcost);
    // alert(days);
 
-   document.getElementById("noDaysM").innerHTML = days + " Days   > " ;
-   document.getElementById("numGuestM").innerHTML = guests + " Guest(s) > " ;
-   document.getElementById("bFastM").innerHTML = "with "  + " breakfast ($30)" ;
-   document.getElementById("totalCostM").innerHTML = total + " Dollars " ;
+   document.getElementById("noDaysHouse").innerHTML = days + " Days   > " ;
+   document.getElementById("numGuestHouse").innerHTML = guests + " Guest(s) > " ;
+   document.getElementById("bFastHouse").innerHTML = "with "  + " breakfast ($30)" ;
+   document.getElementById("totalCostHouse").innerHTML = total + " Dollars " ;
    console.log(total);
 }
 
@@ -251,7 +251,8 @@ $(function () {
 });
 
 //google maps
-var map;
+var mapHostel;
+
 //var newMarker;
 // var directionsService = new google.maps.DirectionsService();
 // var directionsDisplay = new google.maps.DirectionsRenderer();
