@@ -251,7 +251,7 @@ $(function () {
 });
 
 //google maps
-var mapHostel;
+var map;
 
 //var newMarker;
 // var directionsService = new google.maps.DirectionsService();
@@ -261,6 +261,8 @@ function initMap(){
     center: {lat: -41.2792, lng: 174.7803},
     zoom: 8
   });
+
+
 
   marker = new google.maps.Marker({
     position: {lat: -41.2792, lng: 174.7803},
