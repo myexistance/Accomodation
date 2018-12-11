@@ -128,6 +128,8 @@ if ((guests >= 4 ) && (days>=3)) {
 
 }
 }
+
+
 //Make Booking for hostel $30
 function makeBooking30() {
 var bfcost = 0;
@@ -148,9 +150,29 @@ var bfcost = 0;
    document.getElementById("bFastHostel").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostHostel").innerHTML = total + " Dollars " ;
    console.log(total);
+
+    //map and marker
+    map=new google.maps.Map(document.getElementById("map30"),{
+    center: {lat: -41.2792, lng: 174.7803},
+    zoom: 8
+  });
+
+
+
+  marker = new google.maps.Marker({
+    position: {lat: -41.2792, lng: 174.7803},
+    map: map,
+    title: "Hostel30"
+  });
+  infowidow= new google.maps.InfoWindow({
+    content: "Hostel $30 per Night"
+  });
+   marker.addListener('click', function(){
+    infowidow.open(map, marker);
+   });
 }
 
-//Make Booking for hostel $157
+//Make Booking for hotel $157
 function makeBooking157() {
   var bf;
 var bfcost = 0;
@@ -171,6 +193,28 @@ var bfcost = 0;
    document.getElementById("bFastHotel").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostHotel").innerHTML = total + " Dollars " ;
    console.log(total);
+
+     //map and marker
+    map=new google.maps.Map(document.getElementById("map157"),{
+    center: {lat: -41.2792, lng: 174.7803},
+    zoom: 8
+  });
+    marker = new google.maps.Marker({
+    position: {lat: -41.2792, lng: 174.7803},
+    map: map,
+    title: "Hotel 157"
+  });
+  infowidow= new google.maps.InfoWindow({
+    content: "Hotel $157 per Night"
+  });
+   marker.addListener('click', function(){
+    infowidow.open(map, marker);
+   });
+
+
+
+
+
 }
 
 //Make Booking for motel $90
@@ -194,6 +238,25 @@ var bfcost = 0;
    document.getElementById("bFastMotel").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostMotel").innerHTML = total + " Dollars " ;
    console.log(total);
+
+
+    map=new google.maps.Map(document.getElementById("map90"),{
+    center: {lat: -41.2792, lng: 174.7803},
+    zoom: 8
+  });
+
+    marker = new google.maps.Marker({
+    position: {lat: -41.2792, lng: 174.7803},
+    map: map,
+    title: "Motel 90"
+  });
+  infowidow= new google.maps.InfoWindow({
+    content: "Motel $90 per Night"
+  });
+   marker.addListener('click', function(){
+    infowidow.open(map, marker);
+   });
+
 }
 //Make Booking for house $240
 function makeBooking240() {
@@ -216,6 +279,25 @@ var bfcost = 0;
    document.getElementById("bFastHouse").innerHTML = "with "  + " breakfast ($30)" ;
    document.getElementById("totalCostHouse").innerHTML = total + " Dollars " ;
    console.log(total);
+
+    map=new google.maps.Map(document.getElementById("map240"),{
+    center: {lat: -41.2792, lng: 174.7803},
+    zoom: 8
+  });
+
+  marker = new google.maps.Marker({
+    position: {lat: -41.2792, lng: 174.7803},
+    map: map,
+    title: "House 240"
+  });
+  infowidow= new google.maps.InfoWindow({
+    content: "House $240 per Night"
+  });
+   marker.addListener('click', function(){
+    infowidow.open(map, marker);
+   });
+
+
 }
 
 // function Validate() {
@@ -253,67 +335,7 @@ $(function () {
 //google maps
 var map;
 
-//var newMarker;
-// var directionsService = new google.maps.DirectionsService();
-// var directionsDisplay = new google.maps.DirectionsRenderer();
-function initMap(){
-  map=new google.maps.Map(document.getElementById("map"),{
-    center: {lat: -41.2792, lng: 174.7803},
-    zoom: 8
-  });
 
-
-
-  marker = new google.maps.Marker({
-    position: {lat: -41.2792, lng: 174.7803},
-    map: map,
-    title: "Hostel30"
-  });
-  infowidow= new google.maps.InfoWindow({
-    content: "Wellington Stn lat: -41.2792, lng: 174.7803"
-  });
-   marker.addListener('click', function(){
-    infowidow.open(map, marker);
-   });
-
-
-// modal close
-
-
-  // map.addListener('click', function(event) {
-  //     console.log(event);
-  //
-  //     if(newMarker && newMarker.setMap) {
-  //       newMarker.setMap(null);
-  //     }
-  //
-  //
-  //     newMarker = new google.maps.Marker({
-  //       position: event.latLng,
-  //       map: map
-  //     });
-  //     showDirections(event.latLng);
-  // });
-
-}
-
-// Swiper
-// var swiper = new Swiper('.swiper-container', {
-//       effect: 'coverflow',
-//       grabCursor: true,
-//       centeredSlides: true,
-//       slidesPerView: 'auto',
-//       coverflowEffect: {
-//         rotate: 50,
-//         stretch: 0,
-//         depth: 100,
-//         modifier: 1,
-//         slideShadows : true,
-//       },
-//       pagination: {
-//         el: '.swiper-pagination',
-//       },
-//     });
 var span = document.getElementsByClassName("close")[0];
 
 
