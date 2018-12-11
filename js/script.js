@@ -66,67 +66,87 @@ function calculate() {
     guests= document.getElementById('noGuest').value;
    document.getElementById("numGuest").innerHTML = guests + " Guest(s)  " ;
 }
-
+$(function () {
+$("#hostel30Get").hide();
+$("#hotel157Get").hide();
+$("#motelGet").hide();
+$("#houseGet").hide();
+});
 // filtering
-  $("#motelGet").show();
-  $("#hostel30Get").show();
-  $("#hostel157Get").show();
-  $("#houseGet").show();
-
-function accom(){
-if ((guests < 2 ) && (days<=5)) {
-  $("#motelGet").hide();
-  $("#hostel30Get").show();
-  $("#hotel157Get").show();
-  $("#houseGet").show();
-} else
-if ((guests < 2 ) && (days<=10)) {
-  $("#hostel30Get").hide();
-  $("#hotel157Get").hide();
-  $("##motelGet").show();
-  $("#houseGet").show();
-
-} else
-if ((guests >= 3 ) && (days<=10)) {
-  $("#hostel30Get").hide();
-  $("#hotel157Get").hide();
-  $("#motelGet").show();
-  $("#houseGet").show();
-} else
-if ((guests >= 3 ) && (days<=15)) {
-  $("#hostel30Get").hide();
-  $("#hotel157Get").hide();
-  $("#motelGet").hide();
-  $("houseGet").show();
-} else
-if ((guests >= 4 ) && (days<=10)) {
-  $("#hostel30Get").hide();
-  $("#hotel157Get").hide();
-  $("#motelGet").show();
-  $("#houseGet").show();
-} else
-if ((guests >= 4 ) && (days<=15)) {
-  $("#hostel30Get").hide();
-  $("#hotel157Get").hide();
-  $("#motelGet").hide();
-  $("#houseGet").show();
-
-} else
-if ((guests >= 4 ) && (days>=2)) {
-  $("#hostel30Get").hide();
-  $("#hotel157Get").hide();
-  $("#motelGet").hide();
-  $("#houseGet").show();
-
-} else
-if ((guests >= 4 ) && (days>=3)) {
-  $("#hostel30Get").hide();
-  $("#hotel157Get").hide();
-  $("#houseGet").hide();
-  $("#motelGet").show();
-
-
-}
+var accom = [
+        {
+        name    : "Hostel1",
+        type     : "Hostel",
+        price    : 30,
+        nightMin: 1,
+        nightMax: 10,
+        guestMin: 1,
+        guestMax: 1,
+        location: "Wellington",
+        lat    : -47.3783635,
+        lng    :176.262432
+        },
+   {
+        name    : "Hotel1",
+        type     : "Hotel",
+        price    : 157,
+        nightMin: 1,
+        nightMax: 5,
+        guestMin: 1,
+        guestMax: 2,
+        location: "Auckland",
+        lat    : -36.947363,
+        lng    :172.262432
+        },
+        {
+        name    : "Motel1",
+        type     : "Motel",
+        price    : 90,
+        nightMin: 3,
+        nightMax: 10,
+        guestMin: 2,
+        guestMax: 4,
+        location: "Auckland",
+        lat    : -36.947363,
+        lng    :172.262432
+        },
+        {
+        name    : "House1",
+        type     : "House",
+        price    : 240,
+        nightMin: 2,
+        nightMax: 15,
+        guestMin: 1,
+        guestMax: 4,
+        location: "Auckland",
+        lat    : -36.947363,
+        lng    :172.262432
+        }
+];
+function accomo(){
+console.log(guests,days);
+console.log(accom.length);
+console.log(accom[0].name);
+console.log(accom[0].guestMin);
+  for (var i = 0; i < accom.length; i++) {
+    console.log(i);
+    console.log(accom[i].guestMin, accom[i].guestMax, accom[i].nightMin, accom[i].nightMax);
+    if ((guests >= accom[i].guestMin) && (guests <= accom[i].guestMax) && (days >= accom[i].nightMin) && (days <= accom[i].nightMax)) {
+      
+      if (accom[i].type=="Hostel") {
+        $("#hostel30Get").show();
+      }
+      if (accom[i].type=="Hotel") {
+        $("#hotel157Get").show();
+      } 
+      if (accom[i].type=="Motel") {
+        $("#motelGet").show();
+      }
+      if (accom[i].type=="House") {
+        $("#houseGet").show();
+      }
+    }
+  }
 }
 
 
