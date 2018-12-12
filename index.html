@@ -59,10 +59,11 @@
             <!-- indication of user input -->
 
             <div>
-            <h5 class="indicateFont" id="noDays"></h5>
+
+            <h4 class="indicateFont" id="noDays"></h4>
             </div>
             <div>
-            <h5 class="indicateFont" id="numGuest"></h5>
+            <h4 class="indicateFont" id="numGuest"></h4>
             </div>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
@@ -123,7 +124,11 @@
                      </select>
                      <br>
                      <br>
-                     <button type="button" name="button" onclick="calculate(); accomo()"><a href="#filtered" data-toggle="tab">next</a></button>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <button class="makeBooking" type="button" name="button" onclick="calculate(); accomo()"><a href="#filtered" data-toggle="tab">Next</a></button>
 
 
 
@@ -136,7 +141,7 @@
   <div class="row"> <!-- ROW STARTS -->
 
 <!-- Hostel30 WINDOW     -->
-<hr>
+
     <div class="col-sm-12 col-md-6 my__col" id="hostel30Get">
         <div class="results__image no-padding">
           <img class= "accomodation__img" id="hostel30" src="images/Hostel30/Hostel1.jpeg" alt="Hostel30">
@@ -155,16 +160,16 @@
           <button class="makeBooking" data-toggle="modal" data-target="#modal-Hostel" onclick="makeBooking30()">Make Booking</button>
 
         </div>
-        <hr>
+        
     </div>
 
 <!-- Hostel30 Modal -->
 <div class="modal fade" id="modal-Hostel">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-fluid">
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_hostel30">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              
               <div id="map30"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -188,6 +193,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
+                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     <br>
@@ -203,7 +209,7 @@
 
 
 <!-- Hotel157 WINDOW     -->
-<hr>
+
       <div class="col-sm-12 col-md-6 my__col" id="hotel157Get">
           <div class="results__image no-padding">
             <img class= "accomodation__img" id="hostel157" src="images/Hostel157/2Hostel1.jpeg" alt="Hostel157">
@@ -222,16 +228,15 @@
             <button class="makeBooking" data-toggle="modal" data-target="#modal-Hotel" onclick="makeBooking157()">Make Booking</button>
 
           </div>
-          <hr>
+          
       </div>
 
 <!-- Hotel157 Modal -->
 <div class="modal fade" id="modal-Hotel">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-fluid">
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_hostel157">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <div id="map157"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -255,6 +260,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
+                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     <br>
@@ -270,7 +276,7 @@
 
 
 <!-- Motel WINDOW     -->
-<hr>
+
       <div class="col-sm-12 col-md-6 my__col" id="motelGet">
         <div class="results__image no-padding">
           <img class= "accomodation__img" id="Motel" src="images/Motel/Motel1.jpeg" alt="Motel">
@@ -289,16 +295,15 @@
           <button class="makeBooking" data-toggle="modal" data-target="#modal-Motel" onclick="makeBooking90()">Make Booking</button>
 
         </div>
-        <hr>
+        
     </div>
 
 <!-- Motel Modal -->
 <div class="modal fade" id="modal-Motel">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-fluid">
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_Motel">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <div id="map90"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -322,6 +327,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
+                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     <br>
@@ -354,16 +360,15 @@
           <button class="makeBooking" data-toggle="modal" data-target="#modal-House" onclick="makeBooking240()">Make Booking</button>
 
         </div>
-        <hr>
+        
       </div>
 
 <!-- House modal     -->
 <div class="modal fade" id="modal-House">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-fluid">
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_house240">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <div id="map240"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -387,6 +392,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
+                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     <br>

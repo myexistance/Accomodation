@@ -69,13 +69,13 @@
 }
 
 .modalContain{
-    margin: 0 auto;
-    background-color: gray;
+    margin: 5px auto;
+    background-color: $white;
     width: 100%;
 }
 
 .modal__text{
-    color: #F6F6FA;
+    color: $black;
     font: source sans pro;
     font-size: 2em;
     font-weight: regular;
