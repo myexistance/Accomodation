@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+.pure {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.btn-danger {
+  background-color: #e60000 !important;
+  transform: translate(0px,650px);
+  width: 60%;
+}

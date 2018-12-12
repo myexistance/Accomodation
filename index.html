@@ -43,7 +43,7 @@
     <br>
 <!-- Reserve your stay  Button -->
       <div class="text-center buttonPosition">
-          <button type="button" class="btn btn-danger link-modal" data-toggle="modal" data-target="#exampleModalBottom">
+          <button id="reservebtn" type="button" class="btn btn-danger link-modal" data-toggle="modal"  data-target="#exampleModalBottom">
             Reserve your stay
           </button>
       </div>
@@ -169,7 +169,8 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_hostel30">
-              
+              <span id="closeHostel"> &times</span>
+
               <div id="map30"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -193,7 +194,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
-                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
+                        <button class="makeBooking" id="startOverHostel">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     
@@ -237,6 +238,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_hostel157">
+          <span id="closeHotel"> &times</span>
               <div id="map157"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -260,7 +262,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
-                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
+                        <button class="makeBooking" id="startOverHotel" data-dismiss="modal-Hotel">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     
@@ -292,7 +294,7 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star unchecked"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <button class="makeBooking" data-toggle="modal" data-target="#modal-Motel" onclick="makeBooking90()">Make Booking</button>
+          <button class="makeBooking" data-toggle="modal" data-target="modal-Motel" onclick="makeBooking90()">Make Booking</button>
 
         </div>
         
@@ -304,6 +306,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_Motel">
+          <span id="closeMotel"> &times</span>
               <div id="map90"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -327,7 +330,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
-                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
+                        <button class="makeBooking" id="startOverMotel" data-dismiss="modal-Motel">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     
@@ -369,6 +372,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="container modalContain" id="modal_house240">
+          <span id="closeHouse"> &times</span>
               <div id="map240"></div>
               <div class="row">
                 <div class="col-sm-9 modal__info">
@@ -392,7 +396,7 @@
                     <div class="modal__address">
                         <h6 class="indicateFont">O'Reily Avenue, Te Aro, Wellington</h6>
                         <h6 class="indicateFont">(04) 473 7697</h6>
-                        <button class="makeBooking" data-dismiss="modal">Start Over</button>
+                        <button class="makeBooking" id="startOverHouse" data-dismiss="modal-House">Start Over</button>
                         <button class="makeBooking">Confirm</button>
                     </div>
                     
