@@ -97,6 +97,12 @@ select {
   width: 400px;
   text-align-last: center; }
 
+#closeHostel, #closeHotel, #closeMotel #closeHouse {
+  float: right;
+  font-weight: bold;
+  font-size: 20px;
+  color: red; }
+
 * {
   padding: 0;
   margin: 0;
