@@ -17,15 +17,15 @@
  });
 
  $("#startOverHotel").click(function(){
-  document.getElementById("modal-Hostel").style.display="none";
+  document.getElementById("modal-Hotel").style.display="none";
  });
 
  $("#startOverMotel").click(function(){
-  document.getElementById("modal-Hostel").style.display="none";
+  document.getElementById("modal-Motel").style.display="none";
  });
 
  $("#startOverHouse").click(function(){
-  document.getElementById("modal-Hostel").style.display="none";
+  document.getElementById("modal-House").style.display="none";
  });
 
 //Date datepicker
