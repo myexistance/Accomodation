@@ -83,8 +83,8 @@ var accom = [
         guestMin: 1,
         guestMax: 1,
         location: "Wellington",
-        lat    : -47.3783635,
-        lng    :176.262432
+        lat    : -41.3088548,
+        lng    :174.7762779
         },
    {
         name    : "Hotel1",
@@ -95,8 +95,8 @@ var accom = [
         guestMin: 1,
         guestMax: 2,
         location: "Auckland",
-        lat    : -36.947363,
-        lng    :172.262432
+        lat    : -41.2908289,
+        lng    :174.77193
         },
         {
         name    : "Motel1",
@@ -107,8 +107,8 @@ var accom = [
         guestMin: 2,
         guestMax: 4,
         location: "Auckland",
-        lat    : -36.947363,
-        lng    :172.262432
+        lat    : -41.3137808,
+        lng    :174.7757938
         },
         {
         name    : "House1",
@@ -119,8 +119,8 @@ var accom = [
         guestMin: 1,
         guestMax: 4,
         location: "Auckland",
-        lat    : -36.947363,
-        lng    :172.262432
+        lat    : -41.2881738,
+        lng    :174.7279415
         }
 ];
 function accomo(){
@@ -173,14 +173,14 @@ var bfcost = 0;
 
     //map and marker
     map=new google.maps.Map(document.getElementById("map30"),{
-    center: {lat: -41.2792, lng: 174.7803},
-    zoom: 8
+    center: {lat: -41.3088548, lng: 174.7762779},
+    zoom: 15
   });
 
 
 
   marker = new google.maps.Marker({
-    position: {lat: -41.2792, lng: 174.7803},
+    position: {lat: -41.3088548, lng: 174.7762779},
     map: map,
     title: "Hostel30"
   });
@@ -216,11 +216,11 @@ var bfcost = 0;
 
      //map and marker
     map=new google.maps.Map(document.getElementById("map157"),{
-    center: {lat: -41.2792, lng: 174.7803},
-    zoom: 8
+    center: {lat: -41.2908289, lng: 174.77193},
+    zoom: 15
   });
     marker = new google.maps.Marker({
-    position: {lat: -41.2792, lng: 174.7803},
+    position: {lat: -41.2908289, lng: 174.77193},
     map: map,
     title: "Hotel 157"
   });
@@ -261,12 +261,12 @@ var bfcost = 0;
 
 
     map=new google.maps.Map(document.getElementById("map90"),{
-    center: {lat: -41.2792, lng: 174.7803},
-    zoom: 8
+    center: {lat: -41.3137808, lng: 174.7757938},
+    zoom: 15
   });
 
     marker = new google.maps.Marker({
-    position: {lat: -41.2792, lng: 174.7803},
+    position: {lat: -41.3137808, lng: 174.7757938},
     map: map,
     title: "Motel 90"
   });
@@ -301,12 +301,12 @@ var bfcost = 0;
    console.log(total);
 
     map=new google.maps.Map(document.getElementById("map240"),{
-    center: {lat: -41.2792, lng: 174.7803},
-    zoom: 8
+    center: {lat: -41.2881738, lng: 174.7279415},
+    zoom: 15
   });
 
   marker = new google.maps.Marker({
-    position: {lat: -41.2792, lng: 174.7803},
+    position: {lat: -41.2881738, lng: 174.7279415},
     map: map,
     title: "House 240"
   });
@@ -356,9 +356,4 @@ $(function () {
 var map;
 
 
-var span = document.getElementsByClassName("close")[0];
 
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
